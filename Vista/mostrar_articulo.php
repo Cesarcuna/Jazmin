@@ -44,8 +44,8 @@ $listaArticulos=$crud->mostrar();
 				<td><?php echo $articulo->getPrecio() ?></td>
 				<td><?php echo $articulo->getCantidad()?> </td>
 				<td><?php echo $articulo->getMarca()?> </td>
-				<td><a href="actualizar.php?id=<?php echo $articulo->getId()?>&accion_articulo=a">Actualizar</a></td>
-				<td><a href="administrar.php?id=<?php echo $articulo->getId()?>&accion_articulo=e">Eliminar</a></td>
+				<td><a href="actualizar.php?id=<?php echo $articulo->getId()?>&accion=a">Actualizar</a></td>
+				<td><a href="administrar.php?id=<?php echo $articulo->getId()?>&accion=e">Eliminar</a></td>
 			</tr>
 			<?php }?>
 		</body>

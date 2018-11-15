@@ -1,7 +1,7 @@
 <?php
 //incluye la clase Articulo y Crud
-require_once('crud_usuario.php');
-require_once('usuario.php');
+require_once('../Controlador/crud.php');
+require_once('../Modelo/usuario.php');
 $crud=new CrudUsuario();
 $usuario= new Usuario();
 //obtiene todos los libros con el método mostrar de la clase crud
@@ -14,7 +14,7 @@ $listaUsuarios=$crud->mostrar();
 </head>
 <body>
 
-	<form action='administrar_usuario.php' method='post'>
+	<form action='administrar.php' method='post'>
 	<table>
 		<tr>
 			<td>Nombre:</td>
@@ -30,9 +30,9 @@ $listaUsuarios=$crud->mostrar();
 		<head>
 			<td>Id</td>
 			<td>Nombre</td>
-			<td>Precio</td>
-			<td>Cantidad</td>
-			<td>Marca</td>
+			<td>Usuario</td>
+			<td>Contraseña</td>
+			<td>Tipo</td>
 			<td>Actualizar</td>
 			<td>Eliminar</td>
 		</head>
@@ -50,6 +50,6 @@ $listaUsuarios=$crud->mostrar();
 			<?php }?>
 		</body>
 	</table>
-	<a href="welcome.php">Volver</a>
+	<a href="welcome.php?tipo=1">Volver</a>
 </body>
 </html>

@@ -26,7 +26,7 @@ Ingresa los datos del Usuario
 		<input type='hidden' name='insertar' value='insertar'>
 	</table>
 	<input type='submit' value='Guardar'>
-	<a href="welcome.php">Volver</a>
+	<a href="welcome.php?tipo=1">Volver</a>
 </form>
 
 </html>
