@@ -5,7 +5,7 @@
 <header>
 Ingresa los datos del Articulo
 </header>
-<form action='administrar_articulo.php' method='post'>
+<form action='administrar.php' method='post'>
 	<table>
 		<tr>
 			<td>Nombre:</td>
@@ -23,7 +23,7 @@ Ingresa los datos del Articulo
 			<td>Marca:</td>
 			<td><input type='text' name='marca' required></td>
 		</tr>
-		<input type='hidden' name='insertar' value='insertar'>
+		<input type='hidden' name='insertar_articulo' value='insertar_articulo'>
 	</table>
 	<input type='submit' value='Guardar'>
 	<a href="welcome.php">Volver</a>

@@ -1,6 +1,6 @@
 <?php
 //incluye la clase Articulo y Crud
-require_once('crud_articulo.php');
+require_once('crud.php');
 require_once('articulo.php');
 $crud=new CrudArticulo();
 $articulo= new Articulo();
@@ -14,13 +14,13 @@ $listaArticulos=$crud->mostrar();
 </head>
 <body>
 
-	<form action='administrar_articulo.php' method='post'>
+	<form action='administrar.php' method='post'>
 	<table>
 		<tr>
 			<td>Nombre:</td>
 			<td> <input type='text' name='id' ></td>
 		</tr>
-		<input type='hidden' name='buscar' value='buscar'>
+		<input type='hidden' name='buscar_articulo' value='buscar_articulo'>
 	</table>
 	<input type='submit' value='Buscar'>
 	</form>
@@ -44,8 +44,8 @@ $listaArticulos=$crud->mostrar();
 				<td><?php echo $articulo->getPrecio() ?></td>
 				<td><?php echo $articulo->getCantidad()?> </td>
 				<td><?php echo $articulo->getMarca()?> </td>
-				<td><a href="actualizar.php?id=<?php echo $articulo->getId()?>&accion=a">Actualizar</a></td>
-				<td><a href="administrar_articulo.php?id=<?php echo $articulo->getId()?>&accion=e">Eliminar</a></td>
+				<td><a href="actualizar.php?id=<?php echo $articulo->getId()?>&accion_articulo=a">Actualizar</a></td>
+				<td><a href="administrar.php?id=<?php echo $articulo->getId()?>&accion_articulo=e">Eliminar</a></td>
 			</tr>
 			<?php }?>
 		</body>

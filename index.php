@@ -4,12 +4,12 @@
 	</head>	
 	<body>
 		
-		<form action="administrar_usuario.php" method="POST" > 
+		<form action="Controlador/administrar.php" method="POST" > 
 			<div><label>Usuario:</label><input id="usuario" name="usuario" type="text" ></div>
 			<br />
 			<div><label>Password:</label><input id="contrasena" name="contrasena" type="password"></div>
 			<br />
-			<div><input name="ingresar" type="submit" value="ingresar"></div> 
+			<div><input name="ingresar_usuario" type="submit" value="ingresar_usuario"></div> 
 		</form>
 		<footer>
 			Login

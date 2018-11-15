@@ -1,6 +1,6 @@
 <?php
 //incluye la clase Articulo y CrudArticulo
-	require_once('crud_articulo.php');
+	require_once('crud.php');
 	require_once('articulo.php');
 	$crud= new CrudArticulo();
 	$articulo=new Articulo();
@@ -12,7 +12,7 @@
 	<title>Actualizar Articulo</title>
 </head>
 <body>
-	<form action='administrar_articulo.php' method='post'>
+	<form action='administrar.php' method='post'>
 	<table>
 			<td><input type='hidden' name='id' value='<?php echo $articulo->getId()?>' ></td> 
 		<tr>
@@ -31,7 +31,7 @@
 			<td>Marca:</td>
 			<td><input type='text' name='marca' value='<?php echo $articulo->getMarca() ?>' required></td>
 		</tr>
-		<input type='hidden' name='actualizar' value'actualizar'>
+		<input type='hidden' name='actualizar_articulo' value'actualizar_articulo'>
 	</table>
 	<input type='submit' value='Guardar'>
 	<a href="welcome.php">Volver</a>
