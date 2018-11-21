@@ -59,7 +59,7 @@ $usuario= new Usuario();
 		$usuario->setContrasena($_POST['contrasena']);
 		$usuario->setTipo($_POST['tipo']);
 		$crudU->actualizar($usuario);
-		header('Location: ../welcome.php');
+		header('Location: ../Vista/welcome.php?tipo=1');
 	// si el elemento de la vista con nombre actualizar no viene nulo, llama al crud y actualiza el usuario
 	}elseif(isset($_POST['buscar_usuario'])){
 		$usuario->setId($_POST['id']);
@@ -72,8 +72,9 @@ $usuario= new Usuario();
 		}
 	// si la variable accion enviada por GET es == 'e' llama al crud y elimina un articulo
 	}elseif ($_GET['accion_usuario']=='e') {
-		$crudA->eliminar($_GET['id']);
-		header('Location: ../welcome.php?id=1');		
+		$crudU->eliminar($_GET['id']);
+		header('Location: ../Vista/mostrar_usuario.php');	
+		//header('Location: ../Vista/welcome.php?tipo=1');		
 	// si la variable accion enviada por GET es == 'a', envía a la página actualizar.php 
 	}elseif($_GET['accion_usuario']=='a'){
 		header('Location:../Vista/actualizar_usuario.php');

@@ -5,7 +5,7 @@
 <header>
 Ingresa los datos del Articulo
 </header>
-<form action='administrar.php' method='post'>
+<form action='../Controlador/administrar.php' method='post'>
 	<table>
 		<tr>
 			<td>Nombre:</td>
