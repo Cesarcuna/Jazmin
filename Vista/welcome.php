@@ -25,10 +25,10 @@
 		</header>
 		<table border=1>			
 			<tr>
-				<td><a href="ingresar.php">Ingresar</a></td>
+				<td><a href="ingresar_articulo.php">Ingresar</a></td>
 			</tr>
 			<tr>
-				<td><a href="mostrar.php">Ver</a></td>
+				<td><a href="mostrar_articulo.php">Ver</a></td>
 			</tr>
 		</table>
 
