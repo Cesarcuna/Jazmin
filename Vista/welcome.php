@@ -32,9 +32,7 @@
 			</tr>
 		</table>
 
-		
-
-		<a href="index.php">Salir</a>
+		<a href="../index.php">Salir</a>
 
 		<footer>
 			Administracion

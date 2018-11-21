@@ -12,7 +12,7 @@
 	<title>Actualizar Usuario</title>
 </head>
 <body>
-	<form action='administrar_usuario.php' method='post'>
+	<form action='../Controlador/administrar.php' method='post'>
 	<table>
 			<td><input type='hidden' name='id' value='<?php echo $usuario->getId()?>' ></td> 
 		<tr>
@@ -34,7 +34,7 @@
 		<input type='hidden' name='actualizar' value'actualizar'>
 	</table>
 	<input type='submit' value='Guardar'>
-	<a href="welcome.php">Volver</a>
+	<a href="welcome.php?tipo=1">Volver</a>
 </form>
 </body>
 </html>
