@@ -5,7 +5,7 @@
 <header>
 Ingresa los datos del Usuario
 </header>
-<form action='administrar_usuario.php' method='post'>
+<form action='../Controlador/administrar.php' method='post'>
 	<table>
 		<tr>
 			<td>Nombre:</td>
@@ -23,7 +23,7 @@ Ingresa los datos del Usuario
 			<td>Tipo:</td>
 			<td><input type='text' name='tipo' required></td>
 		</tr>
-		<input type='hidden' name='insertar' value='insertar'>
+		<input type='hidden' name='insertar_usuario' value='insertar'>
 	</table>
 	<input type='submit' value='Guardar'>
 	<a href="welcome.php?tipo=1">Volver</a>

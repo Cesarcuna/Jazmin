@@ -1,7 +1,7 @@
 <?php
 //incluye la clase Articulo y CrudArticulo
-	require_once('crud.php');
-	require_once('articulo.php');
+	require_once('../Controlador/crud.php');
+	require_once('../Modelo/articulo.php');
 	$crud= new CrudArticulo();
 	$articulo=new Articulo();
 	//busca el libro utilizando el id, que es enviado por GET desde la vista mostrar.php  disabled
@@ -12,7 +12,7 @@
 	<title>Actualizar Articulo</title>
 </head>
 <body>
-	<form action='administrar.php' method='post'>
+	<form action='../Controlador/administrar.php' method='post'>
 	<table>
 			<td><input type='hidden' name='id' value='<?php echo $articulo->getId()?>' ></td> 
 		<tr>
@@ -34,7 +34,7 @@
 		<input type='hidden' name='actualizar_articulo' value'actualizar_articulo'>
 	</table>
 	<input type='submit' value='Guardar'>
-	<a href="welcome.php">Volver</a>
+	<a href="welcome.php?tipo=1">Volver</a>
 </form>
 </body>
 </html>

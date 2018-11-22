@@ -10,17 +10,17 @@ $listaUsuarios=$crud->mostrar();
 
 <html>
 <head>
-	<title>Mostrar Articulos</title>
+	<title>Mostrar Artículos</title>
 </head>
 <body>
 
-	<form action='administrar.php' method='post'>
+	<form action='../Controlador/administrar.php' method='post'>
 	<table>
 		<tr>
-			<td>Nombre:</td>
+			<td>Id:</td>
 			<td> <input type='text' name='id' ></td>
 		</tr>
-		<input type='hidden' name='buscar' value='buscar'>
+		<input type='hidden' name='buscar_usuario' value='buscar'>
 	</table>
 	<input type='submit' value='Buscar'>
 	</form>
@@ -44,8 +44,8 @@ $listaUsuarios=$crud->mostrar();
 				<td><?php echo $usuario->getUsuario() ?></td>
 				<td><?php echo $usuario->getContrasena()?> </td>
 				<td><?php echo $usuario->getTipo()?> </td>
-				<td><a href="actualizar_usuario.php?id=<?php echo $usuario->getId()?>&accion=a">Actualizar</a></td>
-				<td><a href="administrar_usuario.php?id=<?php echo $usuario->getId()?>&accion=e">Eliminar</a></td>
+				<td><a href="actualizar_usuario.php?id=<?php echo $usuario->getId()?>&accion_usuario=a">Actualizar</a></td>
+				<td><a href="../Controlador/administrar.php?id=<?php echo $usuario->getId()?>&accion_usuario=e">Eliminar</a></td>
 			</tr>
 			<?php }?>
 		</body>

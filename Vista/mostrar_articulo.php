@@ -1,7 +1,7 @@
 <?php
 //incluye la clase Articulo y Crud
-require_once('crud.php');
-require_once('articulo.php');
+require_once('../Controlador/crud.php');
+require_once('../Modelo/articulo.php');
 $crud=new CrudArticulo();
 $articulo= new Articulo();
 //obtiene todos los libros con el método mostrar de la clase crud
@@ -14,10 +14,10 @@ $listaArticulos=$crud->mostrar();
 </head>
 <body>
 
-	<form action='administrar.php' method='post'>
+	<form action='../Controlador/administrar.php' method='post'>
 	<table>
 		<tr>
-			<td>Nombre:</td>
+			<td>id:</td>
 			<td> <input type='text' name='id' ></td>
 		</tr>
 		<input type='hidden' name='buscar_articulo' value='buscar_articulo'>
@@ -44,12 +44,12 @@ $listaArticulos=$crud->mostrar();
 				<td><?php echo $articulo->getPrecio() ?></td>
 				<td><?php echo $articulo->getCantidad()?> </td>
 				<td><?php echo $articulo->getMarca()?> </td>
-				<td><a href="actualizar.php?id=<?php echo $articulo->getId()?>&accion=a">Actualizar</a></td>
-				<td><a href="administrar.php?id=<?php echo $articulo->getId()?>&accion=e">Eliminar</a></td>
+				<td><a href="actualizar_articulo.php?id=<?php echo $articulo->getId()?>&accion_articulo=a">Actualizar</a></td>
+				<td><a href="../Controlador/administrar.php?id=<?php echo $articulo->getId()?>&accion_articulo=e">Eliminar</a></td>
 			</tr>
 			<?php }?>
 		</body>
 	</table>
-	<a href="welcome.php">Volver</a>
+	<a href="welcome.php?tipo=1">Volver</a>
 </body>
 </html>
